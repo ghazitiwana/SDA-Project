@@ -64,7 +64,7 @@
 <div class="container">
 <h3 style="text-align: center"> Welcome! </h3>
 <div class="buttons">
-				<button type="submit" class="quiz">Take Quiz</button> <br>
+				<a href="quiz.php"><button type="submit" class="quiz">Take Quiz</button></a> <br>
 				<button  class="score">View Scores</button> <br>
 				<a href="logout.php"><button  class="logout">Log out</button></a>
 			</div>	
