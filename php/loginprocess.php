@@ -24,7 +24,7 @@ if($row['Name'] == $name && $row['Password'] == $password){
 	$uip=$_SERVER['REMOTE_ADDR']; // get the user ip
 	$action="Login";// query for inser user log in to data base
 	mysqli_query($db,"insert into userlog(id,Name,userIp,action) values('1','".$_SESSION['login']."','$uip','$action')");
-	$extra="quiz.php";
+	$extra="welcometeacher.php";
 	$host=$_SERVER['HTTP_HOST'];
 	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 	header("location:http://$host$uri/$extra");
@@ -36,7 +36,7 @@ elseif ($row2['Name'] == $name && $row2['Password'] == $password) {
 	$uip=$_SERVER['REMOTE_ADDR']; // get the user ip
 	$action="Login";// query for inser user log in to data base
 	mysqli_query($db,"insert into userlog(id,Name,userIp,action) values('1','".$_SESSION['login']."','$uip','$action')");
-	$extra="quiz.php";
+	$extra="welcomestudent.php";
 	$host=$_SERVER['HTTP_HOST'];
 	$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 	header("location:http://$host$uri/$extra");
