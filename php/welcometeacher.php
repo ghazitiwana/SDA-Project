@@ -38,7 +38,7 @@
   
 
 
-   .quiz, .score{
+   .quiz, .score, .logout{
   width: 45%;
   color: white;
   padding: 10px 10px;
@@ -65,7 +65,8 @@
 <h3 style="text-align: center"> Welcome! </h3>
 <div class="buttons">
 				<button type="submit" class="quiz">Upload Video</button> <br>
-				<button  class="score">Check watch time</button>
+				<button  class="score">Check watch time</button><br>
+				<a href="logout.php"><button  class="logout">Log out</button></a>
 			
 			</div>	
 </div>
