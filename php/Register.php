@@ -106,16 +106,16 @@
 
  <script type="text/javascript">
 
- 	  function RegisteredUser() {
- 	  	this.construct = function(builder) {
- 	  		builder.step1();
- 	  		builder.step2();
- 	  		builder.step3();
+    function RegisteredUser() {
+      this.construct = function(builder) {
+        builder.step1();
+        builder.step2();
+        builder.step3();
         builder.step4();
- 	  		return builder.get();
+        return builder.get();
 
- 	  	}
- 	  }
+      }
+    }
 
     function PremiumAccount() {
       this.getAccountType = function() {
@@ -129,7 +129,7 @@
       }
     }
 
- 	  function TeacherBuilder(accountType) {
+    function TeacherBuilder(accountType) {
       this.user = null;
 
       this.step1 = function () {
@@ -484,6 +484,12 @@ function StudentBuilder(accountType) {
 <div class="container"> 
  <form method = "post" name="teacher-form" id="teacher-form" onsubmit="return teacherValidation() && runTeacher()">
  
+
+ <div class="form-group">
+    <label>Username</label>
+       <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username"> 
+     </div>
+
   <div class="form-group">
     <label title="Alphabets only, at least 4 characters long">Full Name </label>
       <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter name here">
@@ -509,14 +515,7 @@ function StudentBuilder(accountType) {
       <span id="errorcon" class="text-danger font-weight-bold"> </span>
     </div>
 
-    <div class="form-group">
-    <label>Designation</label>
-      <select class="form-control">
-        <option>Assistant professor</option>
-        <option>Lecturer</option>
-      </select>
-     </div>
-
+    
     <div class="form-group">
     <label>Account type</label><br>
       <input type="radio" id="accountp" name="account" value="Premium"> Premium Account<br>
@@ -539,6 +538,12 @@ function StudentBuilder(accountType) {
    <form method = "post" id="student-form" onsubmit="return studentValidation() && runStudent()">
  
   <div class="form-group">
+
+    <div class="form-group">
+    <label>Username</label>
+       <input type="text" class="form-control" id="susername" name="susername" placeholder="Enter Username"> 
+     </div>
+     
     <label title="Alphabets only, at least 4 characters long">Full Name </label>
       <input type="text" class="form-control" id="sname" name="sname" placeholder="Enter name here">
       <span id="serrorname" class="text-danger font-weight-bold"> </span>
@@ -563,14 +568,6 @@ function StudentBuilder(accountType) {
       <span id="serrorcon" class="text-danger font-weight-bold"> </span>
     </div>
 
-     <div class="form-group">
-    <label>Education</label>
-      <select class="form-control">
-        <option>Primary</option>
-        <option>Secondary</option>
-        <option>Higher</option>
-      </select>
-     </div>
 
      <div class="form-group">
     <label>Account type</label><br>

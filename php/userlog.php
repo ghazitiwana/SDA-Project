@@ -15,22 +15,20 @@ if($_SESSION['login'])
 <table align="center" border="1">
 <tr>
 <th>Sno.</th>
-<th>User Id</th>
-<th>Name</th>
+<th>Username</th>
 <th>User Ip</th>
 <th>Action Performed</th>
 <th>Login Time</th>
 </tr>
-<?php $query=mysqli_query($db,"select * from userLog where Name='".$_SESSION['login']."'");
+<?php $query=mysqli_query($db,"select * from userLog where username='".$_SESSION['login']."'");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
 ?>
 <tr>
 <td><?php echo $cnt;?></td>
-<td><?php echo $row['id'];?></td>
-<td><?php echo $row['Name'];?></td>
-<td><?php echo $row['userIp'];?></td>
+<td><?php echo $row['username'];?></td>
+<td><?php echo $row['userIP'];?></td>
 <td><?php echo $row['action'];?></td>
 <td><?php echo $row['loginTime'];?></td>
 </tr>

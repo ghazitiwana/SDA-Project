@@ -104,7 +104,7 @@
                     <fieldset>
                         
                         <div class="form-group">
-                            <label>Nickname/Username</label>
+                            <label>Username</label>
                             <input type="text" class="form-control" id="username" name="user" placeholder="Enter Username">
                             <span id="erroruser" class="text-danger font-weight-bold"> </span>
                         </div>
