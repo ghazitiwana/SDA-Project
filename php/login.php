@@ -113,7 +113,7 @@
                             <input type="Password" class="form-control" id="password" name="password" placeholder="Enter Password">
                             <span id="errorpassword" class="text-danger font-weight-bold"> </span>
                         </div>
-                        <p>Don't have an account? <a href="#registerhead" onclick="viewRegister()"> Register now </a></p>
+                        <p>Don't have an account? <a href="Register.php" onclick="viewRegister()"> Register now </a></p>
                         <div class="clearfix">
                             <button type="button" class="cancelbtn">Cancel</button>
                             <button type="submit" class="loginbtn">Login</button>
