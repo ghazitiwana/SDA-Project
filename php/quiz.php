@@ -182,8 +182,8 @@
 
 </div>
 <div class="buttons">
-				<button type="submit" class="submit">Submit</button>
-				<button type="button" class="cancel">Cancel</button>
+				<button type="submit" name="quizmarks" class="submit">Submit</button>
+				<a href="welcomestudent.php"><button type="button" class="cancel">Cancel</button></a>
 			</div>	
 </div>
 

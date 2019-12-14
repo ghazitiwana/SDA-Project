@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body background="http://eskipaper.com/images/modern-wallpaper-7.jpg">
+
 <?php
 
 error_reporting(1);
@@ -30,8 +34,11 @@ if($disp)
 	{
 ?>
 	 
-	 <video width="300" height="200" controls>
+	 <video width="600" height="400" controls>
 	<source src="<?php echo $all_video['video_name']; ?>" type="video/mp4">
 	</video> 
 	
 	<?php } } ?>
+
+</body>
+</html>	

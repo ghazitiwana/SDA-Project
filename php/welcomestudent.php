@@ -38,7 +38,7 @@
   
 
 
-   .quiz, .score, .logout{
+   .quiz, .score, .logout, .video{
   width: 45%;
   color: white;
   padding: 10px 10px;
@@ -66,7 +66,7 @@
 <div class="buttons">
 				<a href="quiz.php"><button type="submit" class="quiz">Take Quiz</button></a> <br>
 				<form method="post" enctype="multipart/form-data" action="video_s.php">
-        <button class ="quiz" type="submit" value="Show" name="disp">Watch Videos</button>
+        <button class ="video" type="submit" value="Show" name="disp">Watch Videos</button>
         </form>
         <button  class="score">View Scores</button> <br>
 				<a href="logout.php"><button  class="logout">Log out</button></a>

@@ -21,7 +21,8 @@
   font-size: 18px;
   padding: 10px 50px 50px 50px;
   }
-   
+
+  
    .buttons{
    	 width: 45%; 
   	font-size: 18px;
@@ -64,10 +65,12 @@
 <div class="container">
 <h3 style="text-align: center"> Welcome! </h3>
 <div class="buttons">
+        <hr>
         <form method="post" enctype="multipart/form-data" action="video.php">
-        <input type="file" name="fileToUpload"/ accept="video/*" style="margin-left: 200px;"><br><br>
-        <button type="submit" value="Uplaod Video" name="upd" class="quiz">Upload Video</button> <br>
+        <input type="file" name="fileToUpload"/ accept="video/*" style="margin-left: 160px;"><br><br>
+        <button type="submit" value="Upload Video" name="upd" class="quiz">Upload Video</button> <br>
         </form>
+        <hr>
 				<button  class="score">Check watch time</button><br>
 				<a href="logout.php"><button  class="logout">Log out</button></a>
 			
