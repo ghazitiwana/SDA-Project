@@ -64,7 +64,10 @@
 <div class="container">
 <h3 style="text-align: center"> Welcome! </h3>
 <div class="buttons">
-				<button type="submit" class="quiz">Upload Video</button> <br>
+        <form method="post" enctype="multipart/form-data" action="video.php">
+        <input type="file" name="fileToUpload"/ accept="video/*" style="margin-left: 200px;"><br><br>
+        <button type="submit" value="Uplaod Video" name="upd" class="quiz">Upload Video</button> <br>
+        </form>
 				<button  class="score">Check watch time</button><br>
 				<a href="logout.php"><button  class="logout">Log out</button></a>
 			
