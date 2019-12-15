@@ -133,6 +133,7 @@
  			
  		}
  		alert("Correct answers: " + score + " out of 5");
+    document.getElementById("quizresult").value = score;
  		return f1 && f2 && f3 && f4 && f5;
  		
  	}
@@ -146,7 +147,7 @@
 <div class="container">
 <div class="row">
 	<div class="col-sm-6">
-		<form action="" method="POST" onsubmit="return quizValidate()">
+		<form name="quiz" method="POST" onsubmit="return quizValidate()" action="quizsubmit.php">
 		<ol>
 		   <li>In Modems Unplugged activity, text is coded using ________ <br>
 		   	<input type="radio" name="ans1" value="numbers">Letters               
@@ -174,8 +175,8 @@
 		   	<input type="radio" name="ans5" id="ans5" value="1">1, 0 <br>
 		   	<span id="error5" class="text-danger font-weight-bold"> </span></li>
 	    </ol> 
-	    	
-	</div>  
+      <input id="quizresult" type="number" name="quizresult" value="0" style="visibility: hidden;">
+    </div>  
 	<div class="col-sm-6">
 		 <img src="https://clipartstation.com/wp-content/uploads/2018/10/quiz-clipart-1-1.png" style="margin-top: 60px; margin-left: 80px;">
 	</div>
@@ -186,5 +187,6 @@
 				<a href="welcomestudent.php"><button type="button" class="cancel">Cancel</button></a>
 			</div>	
 </div>
+</form>
 
 </body>
