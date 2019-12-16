@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head>
 <body background="http://eskipaper.com/images/modern-wallpaper-7.jpg">
 
 <?php
@@ -34,11 +35,32 @@ if($disp)
 	{
 ?>
 	 
-	 <video width="600" height="400" controls>
+	 <video id="vid" width="600" height="400" controls>
 	<source src="<?php echo $all_video['video_name']; ?>" type="video/mp4">
-	</video> 
+	</video>
+	<form></form> 
 	
-	<?php } } ?>
+	
 
 </body>
+<script type="text/javascript">
+
+	var vid = document.getElementById("vid");
+
+	 	vid.onpause = function() {
+	 		var totalTime = vid.currentTime;
+	 		alert(totalTime);
+	 		var videoName = "<?php echo $all_video['video_name']; ?>";
+	 		$.ajax({
+         data: {
+         	totalTime: totalTime,
+         	videoName: videoName
+         },
+         type: "post",
+         url: "inserttime.php",
+});
+	 	};
+
+	 	<?php } } ?>
+	 </script>
 </html>	
