@@ -1,3 +1,5 @@
+<?php 
+$db = mysqli_connect('localhost', 'root', '', 'cs-unplugged'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +54,6 @@
   background-color: #3d3c61;
  }
 
-
  </style>
 
  
@@ -68,9 +69,37 @@
 				<form method="post" enctype="multipart/form-data" action="video_s.php">
         <button class ="video" type="submit" value="Show" name="disp">Watch Videos</button>
         </form>
-        <button  class="score">View Scores</button> <br>
+        <button  class="score" onclick="shownotif()">View Notifications</button>
+        <div id="notifications" class = "notifications" style="display: none;">
+        	<table align="center" border="1">
+        	<tr>
+		<th>Sno.</th>
+		<th>Video Name</th>
+			</tr>
+			<?php $query=mysqli_query($db,"select * from video");
+$cnt=1;
+while($row=mysqli_fetch_array($query))
+{
+?>
+<tr>
+<td><?php echo $cnt;?></td>
+<td><?php echo $row['video_name'];?></td>
+</tr>
+<?php $cnt=$cnt+1;
+} ?>
+</table>
+        </div> <br>
 				<a href="logout.php"><button  class="logout">Log out</button></a>
 			</div>	
 </div>
 
 </body>
+<script type="text/javascript">
+  	function shownotif(){
+  		document.getElementById("notifications").style.display = "block";
+  		var val = "<?php echo $cnt ?>";
+  		val = val - 1;
+  		alert(val + " videos added");
+  	}
+  </script>
+  </html>

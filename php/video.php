@@ -37,21 +37,4 @@ echo "<script type='text/javascript'>window.location.href = 'welcometeacher.php'
 }
 
 
-//display all uploaded video
-
-if($disp)
-
-{
-
-$query=mysqli_query($conn,"select * from video");
-
-	while($all_video=mysqli_fetch_assoc($query))
-
-	{
-?>
-	 
-	 <video width="300" height="200" controls>
-	<source src="test_upload/<?php echo $all_video['video_name']; ?>" type="video/mp4">
-	</video> 
-	
 	<?php } } ?>
